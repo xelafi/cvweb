@@ -26,18 +26,28 @@ const iconMap = {
     redux: ReduxIcon,
 };
 
-const IconCard = ({ iconType = null }) => {
+const IconCard = ({ iconType = null, href = null }) => {
     const iconSrc = iconType && iconMap[iconType];
+    const className = `icon-card ${iconType ? `icon-card--${iconType}` : ''}`;
+    const content = iconSrc && (
+        <img
+            className="icon-card--img"
+            src={iconSrc}
+            alt={`${iconType} icon`}
+        />
+    );
+
+    if (href) {
+        return (
+            <a href={href} className={className} target="_blank" rel="noopener noreferrer">
+                {content}
+            </a>
+        );
+    }
 
     return (
-        <div className={`icon-card ${iconType ? `icon-card--${iconType}` : ''}`}>
-            {iconSrc && (
-                <img
-                    className="icon-card--img"
-                    src={iconSrc}
-                    alt={`${iconType} icon`}
-                />
-            )}
+        <div className={className}>
+            {content}
         </div>
     );
 };

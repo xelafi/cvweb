@@ -4,7 +4,19 @@
     color-scheme: light dark;
   
     // Palette Blue (Light Mode)
-    --value-blue1:  97.8% 0.01 249;   // canvas background
+    --value-blue1: 97.8% 0.01 249;   // canvas background
+	--value-blue2: 97.8% 0.01 249;    // subtle background
+    --value-blue3: 95.4% 0.023 249;   // UI background
+    --value-blue4: 93.2% 0.035 249;   // UI background alt
+    --value-blue5: 89.8% 0.05 249;    // border subtle
+    --value-blue6: 84.2% 0.07 249;    // border
+    --value-blue7: 75.4% 0.1 249;     // hover background
+    --value-blue8: 62.5% 0.15 249;    // active background
+    --value-blue9: 55.5% 0.18 249;    // primary / emphasis
+    --value-blue10: 50.3% 0.17 249;    // hover primary
+    --value-blue11: 42% 0.17 249;      // text on primary
+    --value-blue12: 20% 0.12 249;
+
     --blue-1:  oklch(99.2% 0.004 249 / 1);   // canvas background
     --blue-2:  oklch(97.8% 0.01 249 / 1);    // subtle background
     --blue-3:  oklch(95.4% 0.023 249 / 1);   // UI background
@@ -218,10 +230,10 @@
 
 
 
-    --color-text-primary: hsla(var(--color-neutral-900-hsl), var(--alpha-text-primary));
-	--color-text-secondary: hsla(var(--color-neutral-900-hsl), var(--alpha-text-secondary));
-	--color-text-tertiary: hsla(var(--color-neutral-900-hsl), var(--alpha-text-tertiary));
-	--color-text-quaternary: hsla(var(--color-neutral-900-hsl), var(--alpha-text-quaternary));
+    --color-text-primary: oklch(var(--value-blue12) / var(--alpha-text-primary));
+	--color-text-secondary: oklch(var(--value-blue12) / var(--alpha-text-secondary));
+	--color-text-tertiary: oklch(var(--value-blue12) / var(--alpha-text-tertiary));
+	--color-text-quaternary: oklch(var(--value-blue12) / var(--alpha-text-quaternary));
 
 	--color-fill-primary: hsla(var(--color-neutral-600-hsl), var(--alpha-fill-primary));
 	--color-fill-secondary: hsla(var(--color-neutral-600-hsl), var(--alpha-fill-secondary));
@@ -384,6 +396,19 @@
     :root {
       // Palette Blue (Dark Mode)
 	  --value-blue1: 20% 0.015 249;
+	  --value-blue2: 25% 0.025 249;
+      --value-blue3: 30% 0.035 249;
+      --value-blue4: 35% 0.045 249;
+      --value-blue5: 42% 0.055 249;
+      --value-blue6: 48% 0.07 249;
+      --value-blue7: 58% 0.1 249;
+      --value-blue8: 68% 0.13 249;
+      --value-blue9: 72% 0.17 249;
+      --value-blue10: 76% 0.16 249;
+      --value-blue11: 85% 0.12 249;
+      --value-blue12: 92% 0.08 249;
+
+
       --blue-1:  oklch(20% 0.015 249 / 1);
       --blue-2:  oklch(25% 0.025 249 / 1);
       --blue-3:  oklch(30% 0.035 249 / 1);

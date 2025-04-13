@@ -45,8 +45,8 @@ const GridIconCard = ({ icons, cardSize = 90, cardMargin = 16 }) => {
                     className={`grid-icon--row ${rowIndex % 2 === 1 ? "grid-icon--row--offset" : ""}`}
                     key={rowIndex}
                 >
-                    {row.map((iconType, index) => (
-                        <IconCard key={index} iconType={iconType} />
+                    {row.map((icon, index) => (
+                        <IconCard key={index} iconType={icon?.type} href={icon?.href} />
                     ))}
                 </div>
             ))}
