@@ -1,0 +1,53 @@
+.grid-icon {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--gutter-200);
+    inline-size: 100%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    webkit-mask-image: linear-gradient(90deg, transparent 0%, #ffffff 300px, #ffffff calc(100vw - 300px), transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #ffffff 300px, #ffffff calc(100vw - 300px), transparent 100%);
+
+    &::before {
+      content: "";
+      display: block;
+      inline-size: 100%;
+      block-size: 100px;
+      background: linear-gradient(0deg, oklch(var(--value-blue1) / 0.1), oklch(var(--value-blue1) / 0.8), oklch(var(--value-blue1) / 1));
+      position: absolute;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      inline-size: 100%;
+      background: linear-gradient(180deg,oklch(var(--value-blue1) / 0.1), oklch(var(--value-blue1) / 0.8), oklch(var(--value-blue1) / 1));
+      position: absolute;
+      z-index: 2;
+      inset-block-end: var(--gutter-200);
+      block-size: 100px;
+      pointer-events: none;
+    }
+
+    &--row{
+      display: flex;
+      justify-content: center;
+      gap: var(--gutter-300);
+      overflow: hidden;
+      box-sizing: border-box;
+
+      &--offset{
+        margin-inline-start: var(--gutter-500);
+      }
+
+      &:not(:last-child) {
+        margin-block-end: 16px;
+    }
+      
+    }
+  }

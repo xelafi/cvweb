@@ -1,0 +1,42 @@
+/* Body */
+@use '@css/base/sass-variables' as *;
+
+body {
+    margin: 0;
+    padding: var(--header-height) 0 0 0;
+    background: var(--color-background);
+  
+    
+    @media #{$queriesPhone} {
+    //@media (max-inline-size: 980px) {
+      padding: 0;
+    }
+  
+    &.extended {
+      @media #{$queriesDesktop} {
+      //@media (min-width: 980px) {
+        --max-width-body: 1980px;
+      }
+    }
+  
+    &.app {
+      @media #{$queriesDesktop} {
+      //@media (min-width: 980px) {
+        --max-width-body: 1980px;
+        --container-margin-block-start: var(--gutter-400-responsive);
+        --container-margin-block-end: var(--gutter-300-responsive);
+  
+        height: 100vh;
+        block-size: 100vh;
+        min-height: 500px;
+        min-block-size: 500px;
+        display: flex;
+        flex-flow: column;
+  
+        .container {
+          overflow: hidden;
+          //block-size: 100%;
+        }
+      }
+    }
+  }

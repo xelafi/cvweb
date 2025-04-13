@@ -1,0 +1,84 @@
+/* Global Typography */
+
+html {
+  font: normal var(--root-font-size, 100%)/ 1.4 'Inter', sans-serif;
+  font-feature-settings: 'tnum' 1, 'liga' 1, 'case' 1, 'calt' 1;
+  font-optical-sizing: auto;
+  color: var(--color-text-primary);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  h1 {
+    font-size: var(--font-size-700);
+    font-weight: var(--font-weight-700);
+    color: var(--h-color, var(--color-text-primary));
+    line-height: 1.25;
+  }
+  
+  h2 {
+    font-size: var(--font-size-600);
+    font-weight: var(--font-weight-700);
+    color: var(--h-color, var(--color-text-primary));
+    line-height: 1.25;
+  }
+  
+  h3 {
+    font-size: var(--font-size-500);
+    font-weight: var(--font-weight-600);
+    color: var(--h-color, var(--color-text-primary));
+    line-height: 1.25;
+  }
+  
+  h4 {
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-600);
+    color: var(--h-color, var(--color-text-primary));
+    line-height: 1.25;
+  }
+  
+  h5 {
+    font-size: var(--font-size-300);
+    font-weight: var(--font-weight-500);
+    color: var(--h-color, var(--color-text-primary));
+    line-height: 1.25;
+  }
+  
+  h6 {
+    font-size: var(--font-size-200);
+    font-weight: var(--font-weight-400);
+    color: var(--h-color, var(--color-text-primary));
+    line-height: 1.25;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+  
+    span {
+      display: inline-block;
+      margin: 0 0 0 var(--gutter-200-responsive);
+      margin-inline-start: var(--gutter-200-responsive);
+      font-size: var(--font-size-300);
+      font-weight: var(--font-weight-500);
+      color: var(--color-text-secondary);
+      letter-spacing: var(--letter-spacing);
+    }
+  }
+  
+  small {
+    font-size: var(--font-size-100);
+    font-weight: var(--font-weight-600);
+    color: var(--color-text-secondary);
+    letter-spacing: var(--letter-spacing);
+  }
+  
+  hr {
+    margin: 0;
+    border: none;
+    block-size: var(--gutter-300);
+  }

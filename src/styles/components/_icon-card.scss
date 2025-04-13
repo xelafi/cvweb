@@ -1,0 +1,93 @@
+.icon-card {
+    inline-size: 90px;
+    block-size: 90px;
+    border-radius: var(--border-radius-primary);
+    background: var(--blue-3);
+    border: 1px solid var(--blue-5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--gutter-200);
+    --shadow-icon-color: transparent;
+
+    &:hover {
+      --shadow-icon-opacity: 1;
+      --shadow-icon-transition: opacity .4s ease;
+
+    }
+
+    img {
+      inline-size: 46px;
+      block-size: 46px;
+    }
+    //opacity: 0;
+    //transition: opacity .4s ease;
+
+    &--img {
+        filter: drop-shadow(0 0 .8rem color-mix(in srgb, var(--shadow-icon-color) 40%, transparent))
+    }
+  
+    &--css {
+      --shadow-icon-color: oklch(0.55 0.1393 245.43);
+    }
+
+    &--figma {
+      --shadow-icon-color: conic-gradient(
+        oklch(0.74 0.1246 15.57), oklch(0.7 0.1392 234.8), oklch(0.67 0.1464 157.25), oklch(0.57 0.2134 314.12), oklch(0.63 0.2122 22.16)
+      );
+    }
+
+    &--html {
+      --shadow-icon-color: oklch(0.63 0.197 40.25);
+    }
+
+    &--js {
+      --shadow-icon-color: oklch(0.88 0.1816 94.9);
+    }
+
+    &--storybook {
+      --shadow-icon-color: oklch(0.67 0.2281 5.73);
+    }
+
+    &--nodejs {
+      --shadow-icon-color: oklch(0.77 0.1679 131.14);
+    }
+
+    &--webpack {
+      --shadow-icon-color: oklch(0.83 0.0969 229.09);
+    }
+
+    &--vite {
+      --shadow-icon-color: linear-gradient(
+        110deg,
+        oklch(0.76 0.1315 232.8),
+        oklch(0.84 0.172258 87.9884),
+        oklch(0.52 0.213 312.35)
+      );
+    }
+
+    &--jest {
+      --shadow-icon-color: oklch(0.5 0.1189 4.37);
+    }
+
+    &--react {
+      --shadow-icon-color: oklch(0.81 0.144571 217.2823);
+    }
+
+    &--redux {
+      --shadow-icon-color: oklch(0.55 0.1615 297.66);
+    }
+  
+    &::before {
+      inline-size: 100px;
+      block-size: 100px;
+      content: '';
+      position: absolute;
+      filter: blur(15px);
+      background: var(--shadow-icon-color);
+      opacity: var(--shadow-icon-opacity, 0);
+      transition: opacity var(--shadow-icon-transition, 4s) ease;
+      z-index: -1;
+      will-change: opacity;
+    }
+  }
