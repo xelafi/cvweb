@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import IconCard from '../comopnents/IconCard'
+import IconCard from '../components/IconCard'
 
 const GridIconCard = ({ icons, cardSize = 90, cardMargin = 16 }) => {
     const [iconsPerRow, setIconsPerRow] = useState(5); 
@@ -21,8 +21,8 @@ const GridIconCard = ({ icons, cardSize = 90, cardMargin = 16 }) => {
     for (let i = 0; i < icons.length; i += iconsPerRow) {
         const row = icons.slice(i, i + iconsPerRow);
 
-            for(let i = 1; row.length < iconsPerRow; i++ ) {
-                if(i % 2 === 1){
+            for(let padCount = 1; row.length < iconsPerRow; padCount++ ) {
+                if(padCount % 2 === 1){
                     row.push(null);
                 }else{
                     row.unshift(null);
