@@ -1,16 +1,23 @@
 [
   {
+    "debut": "2020-09",
+    "fin": "2022-06",
+    "formation": "Master Expert en Etudes et Développement du SI - Option Développement web",
+    "etablissement": "H3 Hitema",
+    "lieu": "Issy-les-Moulineaux (92)"
+  },
+  {
     "debut": "2019-09",
-    "fin": "2021-06",
-    "formation": "Master Informatique",
-    "etablissement": "Université de Paris",
-    "lieu": "Paris, France"
+    "fin": "2020-06",
+    "formation": "Licence Professionnelle Design Web Mobile",
+    "etablissement": "Université Paris 8",
+    "lieu": "Saint-Denis (93)"
   },
   {
     "debut": "2016-09",
-    "fin": "2019-06",
-    "formation": "Licence Informatique",
-    "etablissement": "Université de Lyon",
-    "lieu": "Lyon, France"
+    "fin": "2018-06",
+    "formation": "BTS Systèmes Numériques option Informatique et Réseaux",
+    "etablissement": "Lycée Agora",
+    "lieu": "Puteaux (92)"
   }
 ]

@@ -1,24 +1,38 @@
 [
   {
-    "debut": "2023-01",
+    "debut": "2025-09",
     "fin": "present",
-    "poste": "Développeur Full Stack",
-    "nom": "Entreprise A",
+    "poste": "Développeur Front",
+    "nom": "Société Générale",
     "missions": [
-      "Développement d'applications web avec React et Node.js",
-      "Mise en place d'architectures microservices",
-      "Gestion de projet agile et travail en équipe"
+      "Développement de l'application front en ReactJS",
+      "Développement de la BFF en NestJS",
+      "Mise en place de la CI/CD des applications",
+      "Déploiements des applications"
     ]
   },
   {
-    "debut": "2021-06",
-    "fin": "2022-12",
-    "poste": "Développeur Front-End",
-    "nom": "Entreprise B",
+    "debut": "2023-01",
+    "fin": "2025-06",
+    "poste": "Développeur Front ReactJS",
+    "nom": "Primeum",
     "missions": [
-      "Création d'interfaces utilisateur modernes et responsive",
-      "Intégration d'APIs REST",
-      "Optimisation des performances web"
+      "Conception et maintenance d'un Design System",
+      "Elaboration d'un Storybook et tests Jest des composants",
+      "Réalisation d'une application de répartition des primes",
+      "Mise en place d'une application de centralisation des services dans une architecture Back for Front",
+      "Maquettes des interfaces"
+    ]
+  },
+  {
+    "debut": "2020-05",
+    "fin": "2022-08",
+    "poste": "Développeur Front Dataviz",
+    "nom": "Fanvoice",
+    "missions": [
+      "Création d'une application d'analyse sémantique (Dashboard sous D3.js)",
+      "Mise à jour de pages web du site vitrine",
+      "Intégration d'une API REST"
     ]
   }
 ]
