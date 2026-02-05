@@ -126,7 +126,7 @@
   &::before {
     content: '';
     position: absolute;
-    inset: -5px;
+    inset: 0px;
     filter: blur(15px);
     background: var(--shadow-card-color);
     opacity: var(--shadow-card-opacity, 0);
@@ -245,7 +245,7 @@
   &::before {
     content: '';
     position: absolute;
-    inset: -5px;
+    inset: 0px;
     filter: blur(15px);
     background: var(--shadow-card-color);
     opacity: var(--shadow-card-opacity, 0);
