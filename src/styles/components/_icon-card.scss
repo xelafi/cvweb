@@ -94,4 +94,19 @@
       z-index: -1;
       will-change: opacity;
     }
+
+    @media (max-width: 768px) {
+      inline-size: 45px;
+      block-size: 45px;
+
+      img {
+        inline-size: 24px;
+        block-size: 24px;
+      }
+
+      &::before {
+        inline-size: 55px;
+        block-size: 55px;
+      }
+    }
   }

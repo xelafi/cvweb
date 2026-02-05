@@ -2,13 +2,18 @@ import React, { useEffect, useState } from 'react';
 import IconCard from '../components/IconCard'
 
 const GridIconCard = ({ icons, cardSize = 90, cardMargin = 16 }) => {
-    const [iconsPerRow, setIconsPerRow] = useState(5); 
+    const [iconsPerRow, setIconsPerRow] = useState(5);
+    const [isMobile, setIsMobile] = useState(false);
+    
     useEffect(() => {
         const calculateIconsPerRow = () => {
-            const totalCardWidth = cardSize + (2 * cardMargin);
             const containerWidth = window.innerWidth;
-            const fit = Math.floor((containerWidth - 40) / totalCardWidth) - 2; 
+            const mobile = containerWidth <= 768;
+            const fit = mobile 
+                ? 3
+                : Math.floor((containerWidth - 40) / (cardSize + (2 * cardMargin))) - 2;
             setIconsPerRow(Math.max(1, fit));
+            setIsMobile(mobile);
         };
 
         calculateIconsPerRow();
@@ -21,6 +26,7 @@ const GridIconCard = ({ icons, cardSize = 90, cardMargin = 16 }) => {
     for (let i = 0; i < icons.length; i += iconsPerRow) {
         const row = icons.slice(i, i + iconsPerRow);
 
+        if (!isMobile) {
             for(let padCount = 1; row.length < iconsPerRow; padCount++ ) {
                 if(padCount % 2 === 1){
                     row.push(null);
@@ -28,15 +34,22 @@ const GridIconCard = ({ icons, cardSize = 90, cardMargin = 16 }) => {
                     row.unshift(null);
                 }
             }
-
-        // cadre gauche/droite
-        rows.push([null, ...row, null]);
+            // cadre gauche/droite
+            rows.push([null, ...row, null]);
+        } else {
+            rows.push(row);
+        }
     }
 
-
-    const rowLengthWithPadding = iconsPerRow + 2;
-    const emptyRow = Array(rowLengthWithPadding).fill(null);
-    const paddedRows = [emptyRow, ...rows, emptyRow];
+    let paddedRows;
+    if (!isMobile) {
+        const rowLengthWithPadding = iconsPerRow + 2;
+        const emptyRow = Array(rowLengthWithPadding).fill(null);
+        paddedRows = [emptyRow, ...rows, emptyRow];
+    } else {
+        const emptyRow = Array(iconsPerRow).fill(null);
+        paddedRows = [emptyRow, ...rows, emptyRow];
+    }
 
     return (
         <div className="grid-icon">
