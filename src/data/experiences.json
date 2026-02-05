@@ -4,6 +4,7 @@
     "fin": "present",
     "poste": "Développeur Front",
     "nom": "Société Générale",
+    "lieu": "La Défense (92)",
     "missions": [
       "Développement de l'application front en ReactJS",
       "Développement de la BFF en NestJS",
@@ -16,6 +17,7 @@
     "fin": "2025-06",
     "poste": "Développeur Front ReactJS",
     "nom": "Primeum",
+    "lieu": "Levallois-Perret (92)",
     "missions": [
       "Conception et maintenance d'un Design System",
       "Elaboration d'un Storybook et tests Jest des composants",
@@ -29,6 +31,7 @@
     "fin": "2022-08",
     "poste": "Développeur Front Dataviz",
     "nom": "Fanvoice",
+    "lieu": "Paris (75)",
     "missions": [
       "Création d'une application d'analyse sémantique (Dashboard sous D3.js)",
       "Mise à jour de pages web du site vitrine",

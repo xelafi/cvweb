@@ -11,7 +11,7 @@ const Formations = () => {
   return (
     <section className="formations">
       <div className="formations__container">
-        <h2 className="formations__title">Formation</h2>
+        <h2 className="formations__title">Formations</h2>
         <div className="formations__list">
           {formationsData.map((formation, index) => (
             <div key={index} className="formation-card">

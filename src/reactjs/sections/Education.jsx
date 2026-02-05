@@ -18,8 +18,7 @@ const Education = () => {
               <div className="formation-card__header">
                 <div className="formation-card__info">
                   <h3 className="formation-card__diplome">{formation.formation}</h3>
-                  <h4 className="formation-card__etablissement">{formation.etablissement}</h4>
-                  <p className="formation-card__lieu">{formation.lieu}</p>
+                  <h4 className="formation-card__etablissement">{formation.etablissement} - {formation.lieu}</h4>
                 </div>
                 <div className="formation-card__periode">
                   {formatDate(formation.debut)} - {formatDate(formation.fin)}

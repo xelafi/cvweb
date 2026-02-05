@@ -19,7 +19,7 @@ const Experiences = () => {
               <div className="experience-card__header">
                 <div className="experience-card__info">
                   <h3 className="experience-card__poste">{exp.poste}</h3>
-                  <h4 className="experience-card__nom">{exp.nom}</h4>
+                  <h4 className="experience-card__nom">{exp.nom} - {exp.lieu}</h4>
                 </div>
                 <div className="experience-card__periode">
                   {formatDate(exp.debut)} - {formatDate(exp.fin)}
