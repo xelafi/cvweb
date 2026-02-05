@@ -3,7 +3,7 @@ import presentationData from '@data/presentation.json';
 
 const Presentation = () => {
   return (
-    <section className="presentation">
+    <section id="presentation" className="presentation">
       <div className="presentation__container">
         <div className="presentation__photo">
           <img 

@@ -9,7 +9,7 @@ const Education = () => {
   };
 
   return (
-    <section className="formations">
+    <section id="education" className="formations">
       <div className="formations__container">
         <h2 className="formations__title">Formation</h2>
         <div className="formations__list">

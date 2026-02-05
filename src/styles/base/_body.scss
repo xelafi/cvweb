@@ -1,6 +1,10 @@
 /* Body */
 @use '@css/base/sass-variables' as *;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: var(--header-height) 0 0 0;

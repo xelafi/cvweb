@@ -18,7 +18,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="competences">
+    <section id="skills" className="competences">
       <div className="competences__container">
         <h2 className="competences__title">Compétences</h2>
         <GridIconCard icons={stack} />
