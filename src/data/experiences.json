@@ -1,0 +1,24 @@
+[
+  {
+    "debut": "2023-01",
+    "fin": "present",
+    "poste": "Développeur Full Stack",
+    "nom": "Entreprise A",
+    "missions": [
+      "Développement d'applications web avec React et Node.js",
+      "Mise en place d'architectures microservices",
+      "Gestion de projet agile et travail en équipe"
+    ]
+  },
+  {
+    "debut": "2021-06",
+    "fin": "2022-12",
+    "poste": "Développeur Front-End",
+    "nom": "Entreprise B",
+    "missions": [
+      "Création d'interfaces utilisateur modernes et responsive",
+      "Intégration d'APIs REST",
+      "Optimisation des performances web"
+    ]
+  }
+]

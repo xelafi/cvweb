@@ -22,9 +22,17 @@ export default defineConfig({
       {
         find: '@css',
         replacement: path.resolve(__dirname, 'src/styles')
+      },
+      {
+        find: '@data',
+        replacement: path.resolve(__dirname, 'src/data')
+      },
+      {
+        find: '@sections',
+        replacement: path.resolve(__dirname, 'src/reactjs/sections')
       }
     ],
-    extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss']
+    extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss', '.json']
   },
   css: {
     preprocessorOptions: {

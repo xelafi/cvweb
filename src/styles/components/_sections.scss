@@ -1,0 +1,291 @@
+// Présentation
+.presentation {
+  padding: var(--gutter-500) var(--gutter-300);
+  color: var(--color-white);
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: var(--gutter-400);
+    flex-wrap: wrap;
+  }
+
+  &__photo {
+    flex-shrink: 0;
+
+    &-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid oklch(from var(--color-white) l c h / 0.3);
+      box-shadow: 0 8px 32px oklch(from var(--color-black) l c h / 0.2);
+    }
+  }
+
+  &__content {
+    flex: 1;
+    min-width: 300px;
+  }
+
+  &__name {
+    font-size: var(--font-size-800);
+    margin-bottom: var(--gutter-200);
+    font-weight: var(--font-weight-700);
+  }
+
+  &__title {
+    font-size: var(--font-size-500);
+    margin-bottom: var(--gutter-300);
+    opacity: 0.9;
+    font-weight: var(--font-weight-400);
+  }
+
+  &__description {
+    font-size: var(--font-size-400);
+    line-height: 1.6;
+    opacity: 0.95;
+  }
+}
+
+// Compétences
+.competences {
+  padding: var(--gutter-500) var(--gutter-300);
+
+  &__title {
+    font-size: var(--font-size-700);
+    text-align: center;
+    margin-bottom: var(--gutter-300);
+    color: var(--blue-12);
+    font-weight: var(--font-weight-700);
+  }
+}
+
+// Expériences
+.experiences {
+  padding: var(--gutter-500) var(--gutter-300);
+
+  &__container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: var(--font-size-700);
+    text-align: center;
+    margin-bottom: var(--gutter-400);
+    color: var(--blue-12);
+    font-weight: var(--font-weight-700);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-300);
+  }
+}
+
+.experience-card {
+  background: var(--blue-3);
+  border: 1px solid var(--blue-5);
+  border-radius: var(--border-radius-secondary);
+  padding: var(--gutter-300);
+  position: relative;
+  --shadow-card-color: var(--blue-9);
+
+  &:hover {
+    --shadow-card-opacity: 1;
+    --shadow-card-transition: opacity .4s ease;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    filter: blur(15px);
+    background: var(--shadow-card-color);
+    opacity: var(--shadow-card-opacity, 0);
+    transition: opacity var(--shadow-card-transition, 1s) ease;
+    z-index: -1;
+    border-radius: var(--border-radius-secondary);
+    will-change: opacity;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--gutter-300);
+    gap: var(--gutter-300);
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__poste {
+    font-size: var(--font-size-500);
+    color: var(--blue-9);
+    margin-bottom: var(--gutter-200);
+    font-weight: var(--font-weight-600);
+  }
+
+  &__nom {
+    font-size: var(--font-size-400);
+    color: var(--color-neutral-600);
+    font-weight: var(--font-weight-500);
+  }
+
+  &__periode {
+    font-size: var(--font-size-200);
+    color: var(--color-neutral-500);
+    white-space: nowrap;
+    padding: var(--gutter-200) var(--gutter-300);
+    background-color: var(--blue-2);
+    border-radius: var(--border-radius-quaternary);
+  }
+
+  &__missions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__mission {
+    padding: var(--gutter-200) 0 var(--gutter-200) var(--gutter-300);
+    position: relative;
+    color: var(--color-neutral-700);
+    line-height: 1.6;
+
+    &:before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--blue-9);
+      font-weight: var(--font-weight-700);
+    }
+  }
+}
+
+// Formations
+.formations {
+  padding: var(--gutter-500) var(--gutter-300);
+
+  &__container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: var(--font-size-700);
+    text-align: center;
+    margin-bottom: var(--gutter-400);
+    color: var(--blue-12);
+    font-weight: var(--font-weight-700);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-300);
+  }
+}
+
+.formation-card {
+  background: var(--blue-3);
+  border: 1px solid var(--blue-5);
+  border-radius: var(--border-radius-secondary);
+  padding: var(--gutter-300);
+  position: relative;
+  --shadow-card-color: var(--blue-9);
+
+  &:hover {
+    --shadow-card-opacity: 1;
+    --shadow-card-transition: opacity .4s ease;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    filter: blur(15px);
+    background: var(--shadow-card-color);
+    opacity: var(--shadow-card-opacity, 0);
+    transition: opacity var(--shadow-card-transition, 1s) ease;
+    z-index: -1;
+    border-radius: var(--border-radius-secondary);
+    will-change: opacity;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--gutter-300);
+    flex-wrap: wrap;
+  }
+
+  &__info {
+    flex: 1;
+  }
+
+  &__diplome {
+    font-size: var(--font-size-500);
+    color: var(--blue-10);
+    margin-bottom: var(--gutter-200);
+    font-weight: var(--font-weight-600);
+  }
+
+  &__etablissement {
+    font-size: var(--font-size-400);
+    color: var(--color-neutral-600);
+    margin-bottom: var(--gutter-100);
+    font-weight: var(--font-weight-500);
+  }
+
+  &__lieu {
+    font-size: var(--font-size-200);
+    color: var(--color-neutral-500);
+  }
+
+  &__periode {
+    font-size: var(--font-size-200);
+    color: var(--color-neutral-500);
+    white-space: nowrap;
+    padding: var(--gutter-200) var(--gutter-300);
+    background-color: var(--blue-2);
+    border-radius: var(--border-radius-quaternary);
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .presentation {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__name {
+      font-size: var(--font-size-700);
+    }
+
+    &__title {
+      font-size: var(--font-size-400);
+    }
+  }
+
+  .experience-card__header,
+  .formation-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-card__periode,
+  .formation-card__periode {
+    align-self: flex-start;
+  }
+}

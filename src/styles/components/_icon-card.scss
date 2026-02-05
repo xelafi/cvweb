@@ -78,6 +78,10 @@
       --shadow-icon-color: oklch(0.55 0.1615 297.66);
     }
   
+    &--typescript {
+      --shadow-icon-color: oklch(0.57 0.14 254);
+    }
+
     &::before {
       inline-size: 100px;
       block-size: 100px;

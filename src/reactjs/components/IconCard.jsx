@@ -10,6 +10,7 @@ import StorybookIcon from '../../assets/StacksIcon/storybook.svg';
 import ViteIcon from '../../assets/StacksIcon/vite.svg';
 import WebpackIcon from '../../assets/StacksIcon/webpack.svg';
 import ReduxIcon from '../../assets/StacksIcon/redux.svg';
+import TypescriptIcon from '../../assets/StacksIcon/typescript.svg';
 
 // Objet de correspondance
 const iconMap = {
@@ -24,6 +25,7 @@ const iconMap = {
     vite: ViteIcon,
     webpack: WebpackIcon,
     redux: ReduxIcon,
+    typescript: TypescriptIcon,
 };
 
 const IconCard = ({ iconType = null, href = null }) => {
