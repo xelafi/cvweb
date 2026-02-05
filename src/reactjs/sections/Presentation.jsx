@@ -1,5 +1,6 @@
 import React from 'react';
 import presentationData from '@data/presentation.json';
+import profilePhoto from '@/assets/profile.jpg';
 
 const Presentation = () => {
   return (
@@ -7,7 +8,7 @@ const Presentation = () => {
       <div className="presentation__container">
         <div className="presentation__photo">
           <img 
-            src={presentationData.photo} 
+            src={profilePhoto} 
             alt="Photo de profil" 
             className="presentation__photo-img"
           />
