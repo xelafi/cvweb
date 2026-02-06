@@ -1,5 +1,6 @@
 import React from 'react';
 import experiencesData from '@data/experiences.json';
+import Timeline from '@components/Timeline';
 
 const Experiences = () => {
   const formatDate = (dateStr) => {
@@ -15,29 +16,28 @@ const Experiences = () => {
         <h2 className="experiences__title">
           Expériences Professionnelles
         </h2>
-        <div className="experiences__list">
+        <Timeline>
           {experiencesData.map((exp, index) => (
-            <div 
-              key={index} 
-              className="experience-card"
-            >
-              <div className="experience-card__header">
-                <div className="experience-card__info">
-                  <h3 className="experience-card__poste">{exp.poste}</h3>
-                  <h4 className="experience-card__nom">{exp.nom} - {exp.lieu}</h4>
+            <Timeline.Item key={index}>
+              <div className="experience-card">
+                <div className="experience-card__header">
+                  <div className="experience-card__info">
+                    <h3 className="experience-card__poste">{exp.poste}</h3>
+                    <h4 className="experience-card__nom">{exp.nom} - {exp.lieu}</h4>
+                  </div>
+                  <div className="experience-card__periode">
+                    {formatDate(exp.debut)} - {formatDate(exp.fin)}
+                  </div>
                 </div>
-                <div className="experience-card__periode">
-                  {formatDate(exp.debut)} - {formatDate(exp.fin)}
-                </div>
+                <ul className="experience-card__missions">
+                  {exp.missions.map((mission, idx) => (
+                    <li key={idx} className="experience-card__mission">{mission}</li>
+                  ))}
+                </ul>
               </div>
-              <ul className="experience-card__missions">
-                {exp.missions.map((mission, idx) => (
-                  <li key={idx} className="experience-card__mission">{mission}</li>
-                ))}
-              </ul>
-            </div>
+            </Timeline.Item>
           ))}
-        </div>
+        </Timeline>
       </div>
     </section>
   );

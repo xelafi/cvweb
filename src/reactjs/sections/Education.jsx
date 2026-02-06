@@ -1,5 +1,6 @@
 import React from 'react';
 import formationsData from '@data/formations.json';
+import Timeline from '@components/Timeline';
 
 const Education = () => {
   const formatDate = (dateStr) => {
@@ -14,24 +15,23 @@ const Education = () => {
         <h2 className="formations__title">
           Formation
         </h2>
-        <div className="formations__list">
+        <Timeline>
           {formationsData.map((formation, index) => (
-            <div 
-              key={index} 
-              className="formation-card"
-            >
-              <div className="formation-card__header">
-                <div className="formation-card__info">
-                  <h3 className="formation-card__diplome">{formation.formation}</h3>
-                  <h4 className="formation-card__etablissement">{formation.etablissement} - {formation.lieu}</h4>
-                </div>
-                <div className="formation-card__periode">
-                  {formatDate(formation.debut)} - {formatDate(formation.fin)}
+            <Timeline.Item key={index}>
+              <div className="formation-card">
+                <div className="formation-card__header">
+                  <div className="formation-card__info">
+                    <h3 className="formation-card__diplome">{formation.formation}</h3>
+                    <h4 className="formation-card__etablissement">{formation.etablissement} - {formation.lieu}</h4>
+                  </div>
+                  <div className="formation-card__periode">
+                    {formatDate(formation.debut)} - {formatDate(formation.fin)}
+                  </div>
                 </div>
               </div>
-            </div>
+            </Timeline.Item>
           ))}
-        </div>
+        </Timeline>
       </div>
     </section>
   );
