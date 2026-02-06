@@ -1,12 +1,17 @@
 import React from 'react';
-import experiencesData from '@data/experiences.json';
+import experiencesDataFr from '@data/fr/experiences.json';
+import experiencesDataEn from '@data/en/experiences.json';
 import Timeline from '@components/Timeline';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Experiences = () => {
+  const { language, t } = useLanguage();
+  const experiencesData = language === 'fr' ? experiencesDataFr : experiencesDataEn;
+
   const formatDate = (dateStr) => {
-    if (dateStr.toLowerCase() === 'present') return 'Présent';
+    if (dateStr.toLowerCase() === 'present') return t.common.present;
     const [year, month] = dateStr.split('-');
-    const months = ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'];
+    const months = [t.months.jan, t.months.feb, t.months.mar, t.months.apr, t.months.may, t.months.jun, t.months.jul, t.months.aug, t.months.sep, t.months.oct, t.months.nov, t.months.dec];
     return `${months[parseInt(month) - 1]} ${year}`;
   };
 
@@ -14,7 +19,7 @@ const Experiences = () => {
     <section id="experiences" className="experiences">
       <div className="experiences__container">
         <h2 className="experiences__title">
-          Expériences Professionnelles
+          {t.sections.experiences}
         </h2>
         <Timeline>
           {experiencesData.map((exp, index) => (

@@ -105,6 +105,33 @@
     gap: var(--gutter-200);
   }
 
+  &__language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--blue-11);
+    background: var(--blue-3);
+    border: 1px solid var(--blue-5);
+    border-radius: var(--border-radius-primary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-size-200);
+
+    &:hover {
+      background: var(--blue-9);
+      color: var(--color-white);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px oklch(from var(--blue-9) l c h / 0.3);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
   &__linkedin {
     display: flex;
     align-items: center;

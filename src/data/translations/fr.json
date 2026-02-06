@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "presentation": "Présentation",
+    "skills": "Compétences",
+    "experiences": "Expériences",
+    "education": "Formation"
+  },
+  "sections": {
+    "presentation": "Présentation",
+    "skills": "Compétences",
+    "experiences": "Expériences Professionnelles",
+    "education": "Formations"
+  },
+  "months": {
+    "jan": "Jan",
+    "feb": "Fév",
+    "mar": "Mar",
+    "apr": "Avr",
+    "may": "Mai",
+    "jun": "Juin",
+    "jul": "Juil",
+    "aug": "Août",
+    "sep": "Sep",
+    "oct": "Oct",
+    "nov": "Nov",
+    "dec": "Déc"
+  },
+  "common": {
+    "present": "Présent"
+  }
+}

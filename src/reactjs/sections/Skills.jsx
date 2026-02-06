@@ -1,9 +1,11 @@
 import React from 'react';
 import useIntersectionObserver from '@/reactjs/hooks/useIntersectionObserver';
 import GridIconCard from '@layouts/GridIconCard';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Skills = () => {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.2 });
+  const { t } = useLanguage();
 
   const stack = [
     { type: 'react', href:'https://react.dev' },
@@ -24,7 +26,7 @@ const Skills = () => {
     <section id="skills" className="competences" ref={ref}>
       <div className="competences__container">
         <h2 className={`competences__title animate-on-scroll ${isVisible ? 'animate-fade-in-up' : ''}`}>
-          Compétences
+          {t.sections.skills}
         </h2>
         <div className={`animate-on-scroll ${isVisible ? 'animate-fade-in-up animate-delay-200' : ''}`}>
           <GridIconCard icons={stack} />

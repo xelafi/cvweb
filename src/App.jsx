@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '@css/main.scss'
+import { LanguageProvider } from './contexts/LanguageContext'
 
 import Navbar from './reactjs/components/Navbar'
 import Presentation from './reactjs/sections/Presentation'
@@ -13,13 +14,13 @@ function App() {
   const [count, setCount] = useState(0)
   
   return (
-    <>
+    <LanguageProvider>
       <Navbar />
       <Presentation />
       <Skills />
       <Experiences />
       <Education />
-    </>
+    </LanguageProvider>
   )
 }
 

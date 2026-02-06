@@ -1,10 +1,14 @@
 import React from 'react';
 import useIntersectionObserver from '@/reactjs/hooks/useIntersectionObserver';
-import presentationData from '@data/presentation.json';
+import presentationDataFr from '@data/fr/presentation.json';
+import presentationDataEn from '@data/en/presentation.json';
 import profilePhoto from '@/assets/profile.jpg';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Presentation = () => {
   const [ref, isVisible] = useIntersectionObserver({ threshold: 0.2 });
+  const { language } = useLanguage();
+  const presentationData = language === 'fr' ? presentationDataFr : presentationDataEn;
 
   return (
     <section id="presentation" className="presentation" ref={ref}>

@@ -1,0 +1,41 @@
+[
+  {
+    "debut": "2025-09",
+    "fin": "present",
+    "poste": "Front-End Developer",
+    "nom": "Société Générale",
+    "lieu": "La Défense (92)",
+    "missions": [
+      "Development of front-end application in ReactJS",
+      "Development of BFF in NestJS",
+      "Implementation of CI/CD pipelines",
+      "Application deployments"
+    ]
+  },
+  {
+    "debut": "2023-01",
+    "fin": "2025-06",
+    "poste": "ReactJS Front-End Developer",
+    "nom": "Primeum",
+    "lieu": "Levallois-Perret (92)",
+    "missions": [
+      "Design and maintenance of a Design System",
+      "Development of Storybook and Jest component testing",
+      "Development of a bonus distribution application",
+      "Implementation of a service centralization application in a Back for Front architecture",
+      "Interface mockups"
+    ]
+  },
+  {
+    "debut": "2020-05",
+    "fin": "2022-08",
+    "poste": "Front-End Dataviz Developer",
+    "nom": "Fanvoice",
+    "lieu": "Paris (75)",
+    "missions": [
+      "Creation of a semantic analysis application (Dashboard using D3.js)",
+      "Update of showcase website pages",
+      "REST API integration"
+    ]
+  }
+]

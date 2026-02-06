@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import faniconImg from '../../assets/fanicon.png';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, toggleLanguage, t } = useLanguage();
 
 
   const toggleMenu = () => {
@@ -19,13 +21,20 @@ const Navbar = () => {
         </div>
 
         <ul className={`navbar__menu ${isMenuOpen ? 'navbar__menu--active' : ''}`}>
-          <li className="navbar__item"><a className="navbar__link" href="#presentation">Présentation</a></li>
-          <li className="navbar__item"><a className="navbar__link" href="#skills">Compétences</a></li>
-          <li className="navbar__item"><a className="navbar__link" href="#experiences">Expériences</a></li>
-          <li className="navbar__item"><a className="navbar__link" href="#education">Formation</a></li>
+          <li className="navbar__item"><a className="navbar__link" href="#presentation">{t.nav.presentation}</a></li>
+          <li className="navbar__item"><a className="navbar__link" href="#skills">{t.nav.skills}</a></li>
+          <li className="navbar__item"><a className="navbar__link" href="#experiences">{t.nav.experiences}</a></li>
+          <li className="navbar__item"><a className="navbar__link" href="#education">{t.nav.education}</a></li>
         </ul>
 
         <div className="navbar__actions">
+          <button 
+            className="navbar__language"
+            onClick={toggleLanguage}
+            aria-label="Switch language"
+          >
+            {language === 'fr' ? 'FR' : 'EN'}
+          </button>
           <a 
             href="https://www.linkedin.com/in/alexandre-filipe-6a31772ab/" 
             target="_blank" 

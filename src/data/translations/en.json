@@ -1,0 +1,31 @@
+{
+  "nav": {
+    "presentation": "About",
+    "skills": "Skills",
+    "experiences": "Experience",
+    "education": "Education"
+  },
+  "sections": {
+    "presentation": "About Me",
+    "skills": "Skills",
+    "experiences": "Professional Experience",
+    "education": "Education"
+  },
+  "months": {
+    "jan": "Jan",
+    "feb": "Feb",
+    "mar": "Mar",
+    "apr": "Apr",
+    "may": "May",
+    "jun": "Jun",
+    "jul": "Jul",
+    "aug": "Aug",
+    "sep": "Sep",
+    "oct": "Oct",
+    "nov": "Nov",
+    "dec": "Dec"
+  },
+  "common": {
+    "present": "Present"
+  }
+}
