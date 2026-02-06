@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import faniconImg from '../../assets/fanicon.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +14,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__container">
-        <div className="navbar__logo">Alexandre Filipe</div>
+        <div className="navbar__logo">
+          <img src={faniconImg} alt="Alexandre Filipe" />
+        </div>
 
         <ul className={`navbar__menu ${isMenuOpen ? 'navbar__menu--active' : ''}`}>
           <li className="navbar__item"><a className="navbar__link" href="#presentation">Présentation</a></li>
