@@ -13,7 +13,7 @@ const Education = () => {
     <section id="education" className="formations">
       <div className="formations__container">
         <h2 className="formations__title">
-          Formation
+          Formations
         </h2>
         <Timeline>
           {formationsData.map((formation, index) => (
